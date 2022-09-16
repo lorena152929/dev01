@@ -14,4 +14,10 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-- task: PublishBuildArtifacts@1
+- task: PublishBuildArtifacts@
+
+- scripts |
+  npm install
+  npm build
+  npm test
+  displayName: 'npm Install and Build and Test'
